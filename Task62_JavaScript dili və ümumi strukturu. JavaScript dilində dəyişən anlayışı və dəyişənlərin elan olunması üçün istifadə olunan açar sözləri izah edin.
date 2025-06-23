@@ -1,0 +1,35 @@
+//  JavaScript dili və ümumi strukturu. JavaScript dilində dəyişən anlayışı və dəyişənlərin elan olunması üçün istifadə olunan açar sözləri izah edin.
+/*
+  JavaScript veb səhifələrə dinamiklik, interaktivlik və funksionallıq əlavə edir. HTML və CSS ilə birlikdə vebin əsas texnologiyalarından biridir.
+      Form yoxlanışı (məsələn, boş sahəni xəbərdarlıqla göstərmək)
+      Ani rəng və ya məzmun dəyişiklikləri (DOM manipulyasiyası)
+      Slayderlər, menyular, modal pəncərələr
+      Ajax ilə serverdən məlumat alma (məsələn, səhifəni yeniləmədən məlumat gətirmək)
+      Oyunlar, tətbiqlər, real vaxt funksiyaları (chat, xəbər lentləri və s.)
+
+JS faylı HTML-ə əlavə etməyin 3 əsas yolu:
+Inline (daxili) – birbaşa HTML elementinin içində:    <button onclick="alert('Salam dünya!')">Kliklə</button>
+Internal (daxili script tag ilə) – HTML faylının içində <script> tag-i ilə:    
+                                                      <script> 
+                                                          document.getElementById("myButton") 
+                                                                  .addEventListener("click", function() { 
+                                                                        alert("Düyməyə klikləndi!"); 
+                                                                  }); 
+                                                      </script>
+External – ayrıca .js faylı HTML-ə <script src="..."> ilə əlavə etməklə:   
+                                                      <body>   
+                                                        <button id="clickBtn">Tıklayın</button>   
+                                                        <script src="script.js"></script>   
+                                                      </body>
+
+Əsas elementləri:
+| Dəyişənlər  | `let ad = "Elvin";`           |
+| Şərtlər     | `if (ad == "Elvin") {...}`    |
+| Dövrlər     | `for (let i = 0; i < 5; i++)` |
+| Funksiyalar | `function salam() {...}`      |
+| DOM         | `document.querySelector(...)` |
+
+JavaScript-də dəyişənlər 3 əsas açar söz (keyword) ilə elan olunur:
+
+
+*/
