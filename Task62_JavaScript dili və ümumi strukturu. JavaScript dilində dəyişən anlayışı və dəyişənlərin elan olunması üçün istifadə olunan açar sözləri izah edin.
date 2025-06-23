@@ -30,6 +30,9 @@ External – ayrıca .js faylı HTML-ə <script src="..."> ilə əlavə etməkl�
 | DOM         | `document.querySelector(...)` |
 
 JavaScript-də dəyişənlər 3 əsas açar söz (keyword) ilə elan olunur:
+| `var`    | Köhnə (ES5 və öncəki)      | Funksiya səviyyəli, **köhnə üsul**, tövsiyə edilmir. |
+| `let`    | Yeni (ES6 - 2015)          | Blok səviyyəli, **ən çox istifadə olunan**           |
+| `const`  | Yeni (ES6 - 2015)          | Blok səviyyəli, **dəyişməyən (sabit)** dəyərlər üçün |
 
 
 */
