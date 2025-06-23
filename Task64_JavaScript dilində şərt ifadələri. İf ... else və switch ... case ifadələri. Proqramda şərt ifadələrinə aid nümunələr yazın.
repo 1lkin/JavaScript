@@ -1,0 +1,33 @@
+//  JavaScript dilində şərt ifadələri. İf ... else və switch ... case ifadələri. Proqramda şərt ifadələrinə aid nümunələr yazın.
+/*
+Əsas şərt ifadələri:
+  if    ---------------------------------: if (yas >= 18) { console.log("Siz yetkin yaşdasınız."); }
+  else    -------------------------------: if (hava === "günəşli") {
+                                                console.log("Piknikə gedək!");
+                                           } else {
+                                                console.log("Evdə qalmaq daha yaxşıdır.");
+                                           }
+
+  else if   -----------------------------: if (bal >= 90) {
+                                             console.log("Əla");
+                                           } else if (bal >= 70) {
+                                             console.log("Yaxşı");
+                                           } else {
+                                             console.log("Kafi və ya zəif");
+                                           }
+  Ternary operator ? :   ----------------: let icazə = yaş >= 18 ? "Giriş icazəlidir" : "Yaş məhduddur";
+  switch   ------------------------------: let lift = "down";
+
+                                           switch (lift) {
+                                             case "up":
+                                               console.log("go up");
+                                               break;
+                                             case "down":
+                                               console.log("go down");
+                                               break;
+                                             default:
+                                               console.log("press a button");
+                                           }
+
+
+*/
