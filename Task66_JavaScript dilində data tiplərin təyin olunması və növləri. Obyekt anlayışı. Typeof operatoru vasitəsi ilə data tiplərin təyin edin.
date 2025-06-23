@@ -1,0 +1,66 @@
+//  JavaScript dilində data tiplərin təyin olunması və növləri. Obyekt anlayışı. Typeof operatoru vasitəsi ilə data tiplərin təyin edin.
+/*
+JavaScript-də əsas Data Tipi Növləri:
+1. Primitive (sadə, ibtidai tiplər)
+| ----------- | ------------------------------ | --------------- |
+| `String`    | Mətn                           | `"Salam"`       |
+| `Number`    | Ədəd (tam və ya onluq)         | `25`, `3.14`    |
+| `Boolean`   | Doğru/Yanlış                   | `true`, `false` |
+| `Undefined` | Təyin olunmamış                | `let x;`        |
+| `Null`      | Boş və ya mövcud deyilən dəyər | `let x = null;` |
+| `BigInt`    | Böyük ədədlər üçün             | `123456789n`    |
+| `Symbol`    | Unikal dəyər üçün (ES6)        | `Symbol("id")`  |
+
+2. Non-primitive (mürəkkəb tiplər)
+| ---------- | --------------------------------- | -------------------------- |
+| `Object`   | Açar-dəyər (key-value) cütlükləri | `{ ad: "Elvin", yas: 25 }` |
+| `Array`    | Siyahı şəklində məlumat toplusu   | `[1, 2, 3]`                |
+| `Function` | Funksiya tipi                     | `function() {}`            |
+
+JavaScript-də Obyekt
+Obyekt — əlaqəli məlumatları (dəyərlər) və funksiyaları (metodlar) bir yerdə saxlayan bir strukturdur. 
+Obyektlər real həyatda bir şeyin (məsələn, tələbə, maşın, kitab) təsviri kimi işləyir.
+
+let telebe = {
+  ad: "Aynur",
+  yas: 20,
+  ixtisas: "Proqramlaşdırma",
+  salamla: function() {
+    console.log("Salam, mənim adım " + this.ad);
+  }
+};
+
+console.log(telebe.ad);         // "Aynur"
+console.log(telebe["yas"]);     // 20
+telebe.yas = 21;        //  property dəyişmək
+telebe.unvan = "Bakı";  //  yeni property əlavə etmək
+telebe.salamla();  // metodu çağırmaq, nəticə:  "Salam, mənim adım Aynur" 
+
+Obyektin yaradılması
+
+ ------------------------------- | -------------------------------- 
+ let kitab = {                   |         let kitab = new Object();
+   ad: "Yaddaş",                 |         kitab.ad = "Yaddaş";
+   muellif: "Xalid Hüseyni"      |         kitab.muellif = "Xalid Hüseyni";
+ };                              |
+
+Obyekt üzərində dövr (for...in):
+
+for (let acar in telebe) {
+  console.log(acar + ": " + telebe[acar]);
+}
+
+typeof bir dəyərin tipini (data type) müəyyən etmək üçün istifadə olunur.
+
+let telebe = { ad: "Cavad", yas: 25 };
+console.log(typeof telebe);  // "object"
+console.log(typeof null);  // "object"
+console.log(typeof [1,2,3]);  // "object"
+
+❗Qeyd: (typeof null) və (typeof [1,2,3]) nəticəsinin "object" olması JS-in qədim texniki səhvidir (amma dəyişdirilmir ki, köhnə kodlar pozulmasın).
+Daha dəqiq tip yoxlamaları üçün:
+
+Array.isArray([1,2,3]);     // true (massivdir)
+telebe === null;            // true (null yoxlaması)
+
+*/
