@@ -1,0 +1,39 @@
+//  JavaScript dilində String tipi və onun metodları. String metodlarına uyğun nümunələr göstərin.
+/*
+let ad1 = "Elvin";          // cüt dırnaq
+let ad2 = 'Aynur';          // tək dırnaq
+let ad3 = `Salam, ${ad1}`;  // template literal (backtick ilə)
+
+Ən Çox İstifadə Olunan String Metodları:
+| ----------------------- | -------------------------------------------- | --------------------------------------------------- |
+| `length`                | Mətnin uzunluğu                              | `"Salam".length → 5`                                |
+| `toUpperCase()`         | Böyük hərflərə çevirir                       | `"salam".toUpperCase()` → `"SALAM"`                 |
+| `toLowerCase()`         | Kiçik hərflərə çevirir                       | `"SALAM".toLowerCase()` → `"salam"`                 |
+| `charAt(n)`             | `n`-ci indeksdəki simvolu qaytarır           | `"Kitab".charAt(0)` → `"K"`                         |
+| `includes("x")`         | Verilən alt mətni yoxlayır                   | `"salam".includes("la")` → `true`                   |
+| `indexOf("x")`          | Alt mətnin ilk indeksini qaytarır            | `"salam".indexOf("a")` → `1`                        |
+| `replace("a", "b")`     | Bir hissəni başqası ilə əvəz edir            | `"alma".replace("a", "o")` → `"olma"`               |
+| `slice(start, end)`     | Mətndən hissə çıxarır (end daxil deyil)      | `"javascript".slice(0, 4)` → `"java"`               |
+| `substring(start, end)` | `slice`-ə oxşayır, fərq: mənfi indeks yoxdur | `"kitab".substring(1, 3)` → `"it"`                  |
+| `split("ayırıcı")`      | Mətni massivə çevirir                        | `"elvin,gunel".split(",")` → `[ "elvin", "gunel" ]` |
+| `trim()`                | Boşluqları silir (başda və sonda)            | `"  salam  ".trim()` → `"salam"`                    |
+| `startsWith("x")`       | Verilən hissə ilə başlayırmı?                | `"javascript".startsWith("java")` → `true`          |
+| `endsWith("x")`         | Verilən hissə ilə bitirmi?                   | `"index.html".endsWith(".html")` → `true`           |
+| `repeat(n)`             | Mətni `n` dəfə təkrar edir                   | `"ha ".repeat(3)` → `"ha ha ha "`                   |
+| ----------------------- | -------------------------------------------- | --------------------------------------------------- |
+
+let mesaj = " JavaScript öyrənmək maraqlıdır! ";
+
+console.log(mesaj.length);               // 34
+console.log(mesaj.trim());              // "JavaScript öyrənmək maraqlıdır!"
+console.log(mesaj.toUpperCase());       // " JAVASCRIPT ÖYRƏNMƏK MARAQLIDIR! "
+console.log(mesaj.includes("maraqlı")); // true
+console.log(mesaj.slice(0, 10));        // " JavaScri"
+
+📌 Qeyd:
+Metodlar yeni string qaytarır, orijinal dəyəri dəyişmir:
+
+let metn = "salam";
+metn.toUpperCase(); // "SALAM", amma metn hələ də "salam"-dır
+
+*/
