@@ -1,0 +1,44 @@
+// JavaScript dilində riyazi, müqayisə, məntiqi və mənimsətmə operatorları. Operatorlara aid nümunələr göstərin.
+/*
+Riyazi operatorlar:                      a = 10      b = 3
+| -------- | --------------------- | -------------------------- | ------ |
+| `+`      | Toplama               | `a + b`                    | `13`   |
+| `-`      | Çıxma                 | `a - b`                    | `7`    |
+| `*`      | Vurma                 | `a * b`                    | `30`   |
+| `/`      | Bölmə                 | `a / b`                    | `3.33` |
+| `%`      | Qalıq (mod)           | `a % b`                    | `1`    |
+| `**`     | Üst qüvvət (ES6)      | `a ** b`                   | `1000` |
+| `++`     | 1 artırma (inkrement) | `a++`                      | `11`   |
+| `--`     | 1 azaltma (dekrement) | `a--`                      | `9`    |
+| -------- | --------------------- | -------------------------- | ------ |
+
+Müqayisə operatorları:                            a = 5     b = '5'
+| -------- | ------------------------------ | --------------------------- | ------- |
+| `==`     | Bərabərdir (tipə baxmır)       | `a == b`                    | `true`  |
+| `===`    | Tam bərabərdir (tipə də baxır) | `a === b`                   | `false` |
+| `!=`     | Bərabər deyil                  | `a != b`                    | `false` |
+| `!==`    | Tam bərabər deyil              | `a !== b`                   | `true`  |
+| `>`      | Böyüktür                       | `a > 3`                     | `true`  |
+| `<`      | Kiçikdir                       | `a < 10`                    | `true`  |
+| `>=`     | Böyük və ya bərabər            | `a >= 5`                    | `true`  |
+| `<=`     | Kiçik və ya bərabər            | `a <= 4`                    | `false` |
+| -------- | ------------------------------ | --------------------------- | ------- |
+
+Məntiqi operatorlar:
+| -------- | ---------------------------------- | --------------- | ------- |
+| `&&`     | **və** (hər ikisi doğru olmalıdır) | `true && false` | `false` |
+| `||`     | **və ya** (ən az biri doğru)       | `true || false` | `true`  |
+| `!`      | **deyil** (əksini alır)            | `!true`         | `false` |
+| -------- | ---------------------------------- | --------------- | ------- |
+
+Mənimsətmə operatorları:
+| -------- | --------------------- | -------- | ---------------------- |
+| `=`      | Dəyər mənimsətmə      | `x = 5`  | x dəyişəninə 5 verilir |
+| `+=`     | Toplayıb mənimsətmə   | `x += 3` | `x = x + 3`            |
+| `-=`     | Çıxıb mənimsətmə      | `x -= 2` | `x = x - 2`            |
+| `*=`     | Vurub mənimsətmə      | `x *= 2` | `x = x * 2`            |
+| `/=`     | Bölüb mənimsətmə      | `x /= 2` | `x = x / 2`            |
+| `%=`     | Qalıq alıb mənimsətmə | `x %= 2` | `x = x % 2`            |
+| -------- | --------------------- | -------- | ---------------------- |
+
+*/
