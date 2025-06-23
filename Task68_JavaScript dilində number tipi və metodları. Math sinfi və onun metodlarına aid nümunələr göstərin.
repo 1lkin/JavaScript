@@ -1,0 +1,47 @@
+//  JavaScript dilində number tipi və metodları. Math sinfi və onun metodlarına aid nümunələr göstərin.
+/*
+number həm tam ədədləri (integers), həm də onluq kəsirləri (floats) ifadə etmək üçün istifadə olunur.
+
+let yas = 25;       // tam ədəd
+let qiymet = 19.99; // onluq kəsir
+
+JavaScript-də yalnız bir ədəd tipi var: number.
+Böyük və ya kiçik ədədlər üçün də eyni tip istifadə olunur.
+NaN (“Not a Number”) – ədədi olmayan dəyər
+Infinity və -Infinity – sonsuzluq anlayışı
+
+Ən çox istifadə olunan Number metod və funksiyaları:
+| ---------------- | ------------------------------------------- | ------------------------------------ |
+| `toFixed(n)`     | Ondalıklı ədədin vergüldən sonra `n` rəqəmi | `12.3456.toFixed(2)` → `"12.35"`     |
+| `toPrecision(n)` | Ümumi rəqəm sayını dəqiq göstərir           | `12.3456.toPrecision(4)` → `"12.35"` |
+| `Number()`       | Dəyəri rəqəmə çevirir                       | `Number("42")` → `42`                |
+| `parseInt()`     | Mətni tam ədədə çevirir                     | `parseInt("42px")` → `42`            |
+| `parseFloat()`   | Mətni ondalıklı ədədə çevirir               | `parseFloat("42.5kg")` → `42.5`      |
+| `isNaN()`        | Dəyərin `NaN` olub olmadığını yoxlayır      | `isNaN("salam")` → `true`            |
+| `isFinite()`     | Rəqəmin sonsuz olub olmadığını yoxlayır     | `isFinite(100)` → `true`             |
+| ---------------- | ------------------------------------------- | ------------------------------------ |
+
+console.log(qiymet.toFixed(1));       // "50.0"
+console.log(Number("123"));           // 123
+console.log(parseInt("123azn"));      // 123
+
+Math obyektindən istifadə:
+| --------------- | -------------------------------- | --------------------------- |
+| `Math.round()`  | Yaxınlaşdırır (yuvarlaqlaşdırır) | `Math.round(4.7)` → `5`     |
+| `Math.floor()`  | Aşağıya yuvarlaqlaşdırır         | `Math.floor(4.9)` → `4`     |
+| `Math.ceil()`   | Yuxarıya yuvarlaqlaşdırır        | `Math.ceil(4.1)` → `5`      |
+| `Math.max()`    | Ən böyük dəyəri tapır            | `Math.max(5, 10, 2)` → `10` |
+| `Math.min()`    | Ən kiçik dəyəri tapır            | `Math.min(5, 10, 2)` → `2`  |
+| `Math.random()` | 0 ilə 1 arasında təsadüfi ədəd   | `Math.random()` → `0.XXX`   |
+| --------------- | -------------------------------- | --------------------------- |
+
+NaN (Not a Number) və Number Tipi Qarışıqlıqları:
+
+let x = "abc" / 2;
+console.log(x);         // NaN
+console.log(typeof x);  // "number"
+
+// NaN də number tipində sayılır!
+
+
+*/
