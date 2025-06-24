@@ -34,6 +34,7 @@ console.log(telebe.ad);         // "Aynur"
 console.log(telebe["yas"]);     // 20
 telebe.yas = 21;        //  property dəyişmək
 telebe.unvan = "Bakı";  //  yeni property əlavə etmək
+delete telebe.ixtisas;  //  xüsusiyyət silmək
 telebe.salamla();  // metodu çağırmaq, nəticə:  "Salam, mənim adım Aynur" 
 
 Obyektin yaradılması
