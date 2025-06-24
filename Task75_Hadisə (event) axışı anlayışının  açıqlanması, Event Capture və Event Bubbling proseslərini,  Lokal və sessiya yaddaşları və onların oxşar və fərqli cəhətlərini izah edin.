@@ -37,8 +37,43 @@ button#child
 
 Bubbling:
 button#child → div#parent → body → html → document
+------------------------------------------------------------------------------------------------------------------------
+1. Lokal Yaddaş (Local Storage) – brauzerdə məlumatların daimi (səhifə bağlansa da) şəkildə saxlanması üçün istifadə olunur.
 
+Xüsusiyyətləri:
+    Brauzer pəncərəsi və ya tab bağlansa belə, məlumat silinmir
+    Məlumat localStorage obyektində saxlanır
+    Yalnız eyni domen daxilində görünür
+    Həcm limiti təxminən 5MB (brauzerə görə dəyişə bilər)
 
+localStorage.setItem("ad", "Elvin");
+let ad = localStorage.getItem("ad");  // "Elvin"
+localStorage.removeItem("ad");        // Dəyəri silmək
+localStorage.clear();                 // Bütün localStorage təmizlənir
+
+2. Sessiya Yaddaşı (Session Storage) – məlumatları müvəqqəti olaraq, yəni pəncərə və ya tab bağlananadək saxlayır.
+
+Xüsusiyyətləri:
+    Yeni tab açıldıqda boş olur
+    Məlumat yalnız həmin sessiyada qalır
+    sessionStorage obyektində saxlanır
+    Təhlükəsizdir, çünki brauzer bağlandıqda avtomatik silinir
+    Həcmi təxminən 5MB civarındadır
+
+sessionStorage.setItem("tema", "qaranlıq");
+let tema = sessionStorage.getItem("tema");  // "qaranlıq"
+sessionStorage.removeItem("tema");
+sessionStorage.clear();
+
+----------------------------------------------------------------
+// Tema seçimi saxla
+localStorage.setItem("tema", "qaranlıq");
+
+// Sayt yükləndikdə seçilmiş temanı yüklə
+if (localStorage.getItem("tema") === "qaranlıq") {
+  document.body.style.backgroundColor = "#111";
+  document.body.style.color = "#fff";
+}
 
 
 */
