@@ -1,0 +1,81 @@
+//  JavaScript dilində hadisələr(events), AddEventListener metodu,  Mouse, Keyboard və İnput hadisələrini izah edin.
+/*
+***JavaScript-də Hadisələr (Events) nədir?
+Hadisə (event) — istifadəçi və ya brauzer tərəfindən baş verən reaksiya və ya fəaliyyətdir.
+
+    Butona klik etmək
+    Klaviaturada düyməyə basmaq
+    Səhifə yüklənməsi
+    Mausla hərəkət, keçid və s.
+
+| Hadisə      | Təsviri                         |
+| ----------- | ------------------------------- |
+| `click`     | Element kliklənəndə             |
+| `mouseover` | Maus elementin üzərinə gələndə  |
+| `keydown`   | Klaviaturada düyməyə basılanda  |
+| `keyup`     | Düyməni buraxanda               |
+| `input`     | İstifadəçi input-a nəsə yazanda |
+| `submit`    | Forma göndəriləndə              |
+| `change`    | Input, select və s. dəyişəndə   |
+| `load`      | Səhifə tam yüklənəndə           |
+
+**Hadisələrin qoşulması yolları
+1. HTML içində (tövsiyə olunmur):
+<button onclick="alert('Klikləndi!')">Kliklə</button>
+2. JavaScript ilə addEventListener metodu (ən düzgün yol):
+
+let btn = document.getElementById("myBtn");
+
+btn.addEventListener("click", function() {
+  alert("Butona klik olundu!");
+});
+
+**Mouse hadisələri:
+| ----------- | ------------------------------ |
+| `click`     | Klik ediləndə                  |
+| `dblclick`  | İki dəfə klik ediləndə         |
+| `mouseover` | Maus elementin üzərinə gələndə |
+| `mouseout`  | Maus elementi tərk edəndə      |
+| `mousemove` | Maus hərəkət etdikcə           |
+
+let blok = document.getElementById("blok");
+
+blok.addEventListener("mouseover", function() {
+  blok.style.backgroundColor = "yellow";
+});
+
+blok.addEventListener("mouseout", function() {
+  blok.style.backgroundColor = "white";
+});
+
+**Keyboard (Klaviatura) hadisələri:
+| --------- | -------------------- |
+| `keydown` | Düyməyə basılan anda |
+| `keyup`   | Düymə buraxılan anda |
+
+document.addEventListener("keydown", function(e) {
+  console.log("Basılan düymə:", e.key);
+});
+
+**Input hadisələri:
+| -------- | --------------------------------------------- |
+| `input`  | İstifadəçi input sahəsində yazı yazanda       |
+| `change` | Dəyər dəyişəndə (əsasən `select`, `checkbox`) |
+| `submit` | Forma göndəriləndə                            |
+
+<input type="text" id="ad" placeholder="Adınız">
+<p id="goster"></p>
+
+<script>
+  let input = document.getElementById("ad");
+  let goster = document.getElementById("goster");
+
+  input.addEventListener("input", function() {
+    goster.innerText = "Daxil edilən: " + input.value;
+  });
+</script>
+
+
+
+
+*/
