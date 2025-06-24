@@ -1,0 +1,50 @@
+//  JavaScript dilində funksiya anlayışı. Global və function scope anlayışlarını izah edin.
+/*
+
+//  declaration
+function salamVer() {
+  console.log("Salam, dünya!");
+}             
+
+salamVer(); // "Salam, dünya!"
+-----------------------------------------------------------
+
+//  function expression
+let salam = function() {
+  console.log("Salam!");
+};
+
+salam(); // "Salam!"
+-----------------------------------------------------------
+
+//  arrow Function
+let vur = (a, b) => {
+  return a * b;
+};
+
+console.log(vur(3, 4)); // 12
+
+//  1 sətrlik nəticə varsa:
+
+let vur = (a, b) => a * b;
+----------------------------------------------------------------------------------------------------------------------
+//  Global və function scope anlayışları
+
+let ad = "Jet"; // qlobal dəyişən
+
+function all() {
+  let soyad = "Lee"; // function scope
+  console.log(ad + " " + soyad); // burada istifadə olunur
+}
+
+all(); // Jet Lee
+console.log(ad);    //  Jet
+console.log(soyad); // Xəta: yas is not defined
+----------------------------------------------------------------------------------------------------------------------
+| Xüsusiyyət        | Global Scope             | Function Scope               |
+| ----------------- | ------------------------ | ---------------------------- |
+| Harada yaradılır? | Funksiya xaricində       | Funksiya daxilində           |
+| Haradan görünür?  | Hər yerdən               | Yalnız funksiyanın içindən   |
+| Təhlükə           | Təsadüfən dəyişilə bilər | Daha təhlükəsiz, lokal qalır |
+
+*/
