@@ -1,0 +1,72 @@
+//  JavaScript dilində massivlər yaradılması və sintaksisi. 
+//  Massivlərin əsas metodları və dövr operatorları vasitəsi ilə massivlər üzərində əməliyyatları icra edin.
+/*
+Massiv – birdən çox dəyəri tək bir dəyişəndə saxlamağa imkan verən obyekt tipli strukturdur. Dəyərlərə (elementə) indeks vasitəsilə müraciət edilir.
+
+let meyveler = ["alma", "armud", "banan"];       // Literal ilə Array yaradılması
+let reqemler = new Array(1, 2, 3, 4);            // new Array() konstruktoru ilə Array yaradılması
+let qarisiq = ["alma", 25, true, null, [1,2]];   // massivlər qarışıq da ola bilər:
+
+console.log(meyveler); // Output: ["alma", "armud", "banan"]
+console.log(meyveler[0]); // "alma"       //  Massivdə elementə müraciət
+--------------------------------------------------------------------------------------------------------------------------------------------------
+meyveler[3] = "nar";          // indeks ilə Massivə yeni element əlavə etmək
+meyveler.push("üzüm");        // sona yeni element əlavə etmək
+meyveler.unshift("ananas");   // əvvələ yeni element əlavə etmək
+
+meyveler.pop();         // sonuncunu silir
+meyveler.shift();       // birincini silir
+
+Massivə aid faydalı metodlar:
+| ------------------- | --------------------------------------------------------- | ----------------------- |
+| `push()`            | Sona əlavə edir                                            | `arr.push("yeni")`      |
+| `pop()`             | Sonuncunu silir                                            | `arr.pop()`             |
+| `unshift()`         | Əvvələ əlavə edir                                          | `arr.unshift("ilk")`    |
+| `shift()`           | İlk elementi silir                                         | `arr.shift()`           |
+| `length`            | Massivin uzunluğu                                          | `arr.length`            |
+| `indexOf()`         | Elementin indeksini qaytarır                               | `arr.indexOf("alma")`   |
+| `includes()`        | Element var ya yox                                         | `arr.includes("banan")` |
+| `join()`            | Elementləri stringə çevirir                                | `arr.join(", ")`        |
+| `concat()`          | Merges two or more arrays.                                 | `arr1.concat(arr2)`     |
+| `reverse()`         | Massivi tərsinə çevirir                                    | `arr.reverse()`         |
+| `sort()`            | Massivi əlifba sırası ilə düzür                            | `arr.sort()`            |
+| `slice(start, end)` | Hissəsini çıxarır (end daxil deyil)                        | `arr.slice(1, 3)`       |
+| `splice(i, n)`      | `i`-dən başlayaraq `n` ədəd el. Adds, removes, or replaces | `arr.splice(1, 2)`      |
+| ------------------- | --------------------------------------------------------- | ----------------------- |
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Massiv üzərində dövr (for və for...of)
+
+let reqemler = [10, 20, 30];
+
+for (let i = 0; i < reqemler.length; i++) {
+  console.log(reqemler[i]);
+}                                // for
+-----------------------------------------------------------------------
+for (let r of reqemler) {                
+  console.log(r); 
+}                                // for ... of
+
+-----------------------------------------------------------------------
+// forEach() method 
+const numbers = [1, 2, 3, 4, 5];
+
+numbers.forEach(function(number, index) {
+  console.log(`Element at index ${index}: ${number}`);
+});
+
+-----------------------------------------------------------------------
+// Using arrow function
+const fruits = ['apple', 'banana', 'cherry'];
+fruits.forEach(fruit => console.log(fruit.toUpperCase()));
+
+-----------------------------------------------------------------------
+const numbers = [1, 2, 3, 4, 5, 6];
+
+// Filter out even numbers
+const evenNumbers = numbers.filter(number => number % 2 === 0);
+
+console.log(evenNumbers); // Output: [2, 4, 6]
+console.log(numbers);     // Output: [1, 2, 3, 4, 5, 6] (original array remains unchanged)
+
+*/
