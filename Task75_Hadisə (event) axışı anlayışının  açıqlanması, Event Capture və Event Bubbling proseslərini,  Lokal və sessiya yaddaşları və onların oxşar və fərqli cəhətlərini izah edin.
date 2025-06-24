@@ -1,0 +1,44 @@
+//  Hadisə (event) axışı anlayışının  açıqlanması, Event Capture və Event Bubbling proseslərini,  
+//  Lokal və sessiya yaddaşları və onların oxşar və fərqli cəhətlərini izah edin.
+/*
+DOM hadisələrinin (eventlərin) necə işlədiyini anlamağa kömək edir.
+Hadisə Axışı (Event Flow) nədir?
+Veb səhifədə bir elementə klik və ya başqa hadisə baş verəndə, bu hadisə DOM ağacı boyunca müəyyən bir sırayla yayılır.
+Bu prosesə event flow (hadisə axışı) deyilir və 3 mərhələdən ibarətdir:
+
+**Capturing Phase – yuxarıdan başlayaraq hədəfə qədər enir
+**Target Phase – hadisənin baş verdiyi real element
+**Bubbling Phase – hədəfdən yuxarıya doğru geri gedir
+
+**Event Capturing (Hadisənin tutulması)
+addEventListener() funksiyasına 3-cü parametr olaraq true verilsə, capturing fazasında işləyir.
+
+parent.addEventListener("click", function() {
+  console.log("Parent (capturing)");
+}, true);
+
+**Event Bubbling (Hadisənin qalxması) - Ən çox istifadə olunan fazadır.
+Hadisə hədəf elementdə başladıqdan sonra yuxarı doğru valideyn elementlərə keçir.
+JavaScript-də default olaraq hadisələr bubbling şəklində yayılır.
+
+child.addEventListener("click", function() {
+  console.log("Child klikləndi");
+});
+
+parent.addEventListener("click", function() {
+  console.log("Parent klikləndi (bubbling)");
+});
+
+Capturing:
+document → html → body → div#parent → button#child
+
+Target:
+button#child
+
+Bubbling:
+button#child → div#parent → body → html → document
+
+
+
+
+*/
