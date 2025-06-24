@@ -1,0 +1,103 @@
+//  JavaScript dilində DOM anlayışı və sadə strukturu. HTML elementlərinə müraciət metodlarına aid nümunələr göstərin.
+/*
+//  DOM (Document Object Model) — HTML faylı obyektlər ağacı (tree structure) şəklində təmsil edən modeldir. JS bu model köməyilə veb səhifəni
+//  oxuya, dəyişə və idarə edir. HTML fayl yükləndikdə brauzer onu DOM-a çevirir və JS ilə bu DOM üzərində işləyə bilirik.
+
+//  DOM-un Sadə Quruluşu HTML faylda
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Saytım</title>
+  </head>
+  <body>
+    <h1 id="basliq">Xoş gəldiniz!</h1>
+    <p class="metn">Bu JavaScript DOM nümunəsidir.</p>
+    <button onclick="deyis()">Məni kliklə</button>
+  </body>
+</html>
+
+//  HTML fayl DOM-da
+Document
+ └── html
+     ├── head
+     │    └── title
+     └── body
+          ├── h1 (id="basliq")
+          ├── p (class="metn")
+          └── button
+
+//  DOM ilə İşləmək üçün JavaScript-də istifadə olunan əsas metodlar:
+| Metod                                      | Təyinatı                                    |
+| ------------------------------------------ | ------------------------------------------- |
+| `document.getElementById("id")`            | `id`-yə görə element seçir                  |
+| `document.getElementsByClassName("class")` | `class`-a görə elementlər siyahısı qaytarır |
+| `document.getElementsByTagName("tag")`     | Tag adına görə elementləri qaytarır         |
+| `document.querySelector("sektor")`         | CSS seçici ilə 1 element seçir              |
+| `document.querySelectorAll("sektor")`      | CSS seçici ilə elementlər siyahısı qaytarır |
+---------------------------------------------------------------------------------------------------
+
+//  NUMUNE
+<h1 id="basliq">Salam!</h1>
+<button onclick="deyis()">Dəyiş</button>
+
+<script>
+  function deyis() {
+    let element = document.getElementById("basliq");
+    element.innerText = "JavaScript DOM işləyir!";
+    element.style.color = "blue";
+  }
+</script>
+
+DOM-da əsas dəyişikliklər:
+| Nə edilir?            | Nümunə                                     |
+| --------------------- | ------------------------------------------ |
+| Mətni dəyişmək        | `element.innerText = "Yeni mətn"`          |
+| HTML dəyişmək         | `element.innerHTML = "<b>Qalın</b>"`       |
+| Stil dəyişmək         | `element.style.backgroundColor = "yellow"` |
+| Yeni element yaratmaq | `document.createElement("p")`              |
+| Element əlavə etmək   | `parent.appendChild(yeniElement)`          |
+
+--------------------------------------------------------------------------------------------------------
+<body>
+
+  <h1 id="basliq">Salam, dünya!</h1>
+  <button onclick="basligiDeyis()">Məni kliklə</button>
+
+  <script>
+    function basligiDeyis() {
+      let basliq = document.getElementById("basliq");
+      basliq.innerText = "DOM uğurla dəyişdi!";
+      basliq.style.color = "green";
+      basliq.style.fontSize = "36px";
+    }
+  </script>
+
+</body>
+---------------------------------------------------------------------------------------------------------
+<body>
+
+  <label for="ad">Adınızı daxil edin:</label>
+  <input type="text" id="ad" placeholder="Adınız">
+  <button onclick="salamla()">Göndər</button>
+
+  <p id="netice"></p>
+
+  <script>
+    function salamla() {
+      let ad = document.getElementById("ad").value;
+      let netice = document.getElementById("netice");
+
+      if (ad.trim() === "") {
+        netice.innerText = "Zəhmət olmasa adınızı yazın.";
+        netice.style.color = "red";
+      } else {
+        netice.innerText = "Salam, " + ad + "!";
+        netice.style.color = "green";
+      }
+    }
+  </script>
+
+</body>
+
+
+*/
