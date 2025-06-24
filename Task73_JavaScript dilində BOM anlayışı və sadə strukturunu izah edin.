@@ -1,0 +1,59 @@
+//  JavaScript dilində BOM anlayışı və sadə strukturunu izah edin.
+/*
+DOM → HTML sənədini idarə edir
+BOM → brauzerin pəncərəsini və digər hissələrini idarə edir
+
+BOM-un Sadə Strukturu:
+window
+ ├── navigator
+ ├── screen
+ ├── location
+ ├── history
+ ├── document (DOM-un özü buradadır)
+ └── alert, confirm, prompt və s.
+
+| Obyekt/Funksiya | Təyinatı                                               |
+| --------------- | ------------------------------------------------------ |
+| `window`        | Əsas global obyektdir. Bütün BOM metodları buna aiddir |
+| `navigator`     | Brauzer və sistem haqqında məlumat verir               |
+| `screen`        | Ekran haqqında məlumat (hündürlük, en)                 |
+| `location`      | URL və yönləndirmə məlumatları                         |
+| `history`       | Brauzer tarixçəsi üzərində əməliyyat                   |
+| `alert()`       | Sadə xəbərdarlıq pəncərəsi                             |
+| `confirm()`     | Təsdiqləmə (Yes/No) pəncərəsi                          |
+| `prompt()`      | İstifadəçidən məlumat alma pəncərəsi                   |
+
+Sadə Nümunələr:
+
+alert("Xoş gəlmisiniz!");              //  xəbərdarlıq pəncərəsi
+
+let ad = prompt("Adınızı yazın:");    //  istifadəçidən ad almaq
+alert("Salam, " + ad + "!");
+
+let cavab = confirm("Saytdan çıxmaq istəyirsiniz?");  //  təsdiqləmə sorğusu
+if (cavab) {
+  alert("Uğurla çıxıldı!");
+} else {
+  alert("Saytda qaldınız.");
+}
+
+console.log(navigator.userAgent);   // Brauzer haqqında texniki info
+console.log(navigator.language);    // Dil (məsələn, "az-AZ")
+
+console.log(screen.width);   // Ekranın eni
+console.log(screen.height);  // Ekranın hündürlüyü
+
+console.log(window.innerWidth); // Width of the browser's viewport
+
+console.log(location.href);    // Current URL
+location.reload();             // Reload the page
+location.replace("https://example.com"); // Navigate to a new page
+
+history.back();    // Go to the previous page
+history.forward(); // Go to the next page
+
+window.open() - open a new window
+window.close() - close the current window
+window.moveTo() - move the current window
+window.resizeTo() - resize the current window
+*/
