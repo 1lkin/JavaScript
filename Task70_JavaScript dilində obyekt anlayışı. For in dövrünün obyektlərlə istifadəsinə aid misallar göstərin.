@@ -1,0 +1,41 @@
+// JavaScript dilində obyekt anlayışı. For in dövrünün obyektlərlə istifadəsinə aid misallar göstərin.
+JavaScript-də Obyekt
+Obyekt — əlaqəli məlumatları (dəyərlər) və funksiyaları (metodlar) bir yerdə saxlayan bir strukturdur. 
+Obyektlər real həyatda bir şeyin (məsələn, tələbə, maşın, kitab) təsviri kimi işləyir.
+
+let telebe = {
+  ad: "Aynur",
+  yas: 20,
+  ixtisas: "Proqramlaşdırma",
+  salamla: function() {
+    console.log("Salam, mənim adım " + this.ad);
+  }
+};
+
+console.log(telebe.ad);         // "Aynur"
+console.log(telebe["yas"]);     // 20
+telebe.yas = 21;        //  property dəyişmək
+telebe.unvan = "Bakı";  //  yeni property əlavə etmək
+delete telebe.ixtisas;  //  xüsusiyyət silmək
+telebe.salamla();  // metodu çağırmaq, nəticə:  "Salam, mənim adım Aynur" 
+
+Obyektin yaradılması
+
+ ------------------------------- | -------------------------------- 
+ let kitab = {                   |         let kitab = new Object();
+   ad: "Yaddaş",                 |         kitab.ad = "Yaddaş";
+   muellif: "Xalid Hüseyni"      |         kitab.muellif = "Xalid Hüseyni";
+ };                              |
+
+Obyekt üzərində dövr (for...in):
+
+for (let acar in telebe) {
+  console.log(acar + ": " + telebe[acar]);
+}
+
+
+❗Qeyd: (typeof null) və (typeof [1,2,3]) nəticəsinin "object" olması JS-in qədim texniki səhvidir (amma dəyişdirilmir ki, köhnə kodlar pozulmasın).
+Daha dəqiq tip yoxlamaları üçün:
+
+Array.isArray([1,2,3]);     // true (massivdir)
+telebe === null;            // true (null yoxlaması)
